@@ -6,25 +6,25 @@
 [![Build Status](https://img.shields.io/travis/bitpay/bitcore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-message)
 [![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-message.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcore-message?branch=master)
 
-bitcore-message adds support for verifying and signing bitcoin messages in [Node.js](http://nodejs.org/) and web browsers.
+bitcore-message-zcash adds support for verifying and signing zcash messages in [Node.js](http://nodejs.org/) and web browsers.
 
 See [the main bitcore repo](https://github.com/bitpay/bitcore) for more information.
 
 ## Getting Started
 
 ```sh
-npm install bitcore-message
+npm install bitcore-message-zcash
 ```
 
 ```sh
-bower install bitcore-message
+bower install bitcore-message-zcash
 ```
 
 To sign a message:
 
 ```javascript
-var bitcore = require('bitcore-lib');
-var Message = require('bitcore-message');
+var bitcore = require('bitcore-lib-zcash');
+var Message = require('bitcore-message-zcash');
 
 var privateKey = bitcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
 var signature = Message('hello, world').sign(privateKey);
