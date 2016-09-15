@@ -2,29 +2,33 @@
 # Bitcoin Message Verification and Signing for Bitcore
 
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-message.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-message)
-[![Build Status](https://img.shields.io/travis/bitpay/bitcore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-message)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-message.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcore-message?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/zcash-bitcore-message.svg?style=flat-square)](https://www.npmjs.org/package/zcash-bitcore-message)
+[![Build Status](https://img.shields.io/travis/bitmex/zcash-bitcore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/bitmex/zcash-bitcore-message)
+[![Coverage Status](https://img.shields.io/coveralls/bitmex/zcash-bitcore-message.svg?style=flat-square)](https://coveralls.io/r/bitmex/zcash-bitcore-message?branch=master)
 
-bitcore-message-zcash adds support for verifying and signing zcash messages in [Node.js](http://nodejs.org/) and web browsers.
+zcash-bitcore-message adds support for verifying and signing zcash messages in [Node.js](http://nodejs.org/) and web browsers.
+
+Forked for [Zcash](https://github.com/zcash/zcash) for use with [Bitcore](https://github.com/bitmex/zcash-bitcore).
+
+Credit to @bitpay for the original implementation and @str4d for the Zcash fork.
 
 See [the main bitcore repo](https://github.com/bitpay/bitcore) for more information.
 
 ## Getting Started
 
 ```sh
-npm install bitcore-message-zcash
+npm install zcash-bitcore-message
 ```
 
 ```sh
-bower install bitcore-message-zcash
+bower install zcash-bitcore-message
 ```
 
 To sign a message:
 
 ```javascript
-var bitcore = require('bitcore-lib-zcash');
-var Message = require('bitcore-message-zcash');
+var bitcore = require('zcash-bitcore-lib');
+var Message = require('zcash-bitcore-message');
 
 var privateKey = bitcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
 var signature = Message('hello, world').sign(privateKey);

@@ -1,4 +1,4 @@
-var bitcore = require('bitcore-lib-zcash');
+var bitcore = require('zcash-bitcore-lib');
 bitcore.Message = require('./lib/message');
 
 module.exports = bitcore.Message;
